@@ -12,6 +12,6 @@ rl.question("Nhập số n:", (n) => {
     n = Math.floor(n / 10);
     dem++;
   }
-  console.log(`Số của ${number} có ${dem} số`);
+  console.log(`Chiều dài của số ${number} có ${dem} số`);
   rl.close();
 });

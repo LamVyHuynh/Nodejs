@@ -17,5 +17,6 @@ rl.question("Nhập số 1: ", (num1) => {
     } else {
       console.log(`${num1} = ${num2}`);
     }
+    rl.close();
   });
 });

@@ -3,6 +3,7 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
+
 rl.question("Nhập tuổi: ", (age) => {
   age = parseInt(age);
   if (age < 18) {
