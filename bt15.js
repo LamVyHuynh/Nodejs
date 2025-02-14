@@ -4,7 +4,8 @@ const rl = readline.Interface({
   output: process.stdout,
 });
 
-function soNguyenTo(n) {
+rl.question("Nhập số n:", (n) => {
+  n = parseInt(n);
   let isPrime = true;
   if (n < 2) isPrime = false;
   for (let i = 2; i <= Math.sqrt(n); i++) {
@@ -14,10 +15,5 @@ function soNguyenTo(n) {
     }
   }
   console.log(isPrime ? "Số nguyên tố" : "Không là số nguyên tố");
-}
-
-rl.question("Nhập số n:", (n) => {
-  n = parseInt(n);
-  soNguyenTo(n);
   rl.close();
 });

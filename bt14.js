@@ -4,18 +4,14 @@ const rl = readline.Interface({
   output: process.stdout,
 });
 
-function demSo(n) {
+rl.question("Nhập số n:", (n) => {
+  n = parseInt(n);
+  let number = n;
   let dem = 0;
   while (n > 0) {
     n = Math.floor(n / 10);
     dem++;
   }
-  return dem;
-}
-
-rl.question("Nhập số n:", (n) => {
-  n = parseInt(n);
-  let demso = demSo(n);
-  console.log(`Số ${n} có ${demso} số`);
+  console.log(`Số của ${number} có ${dem} số`);
   rl.close();
 });

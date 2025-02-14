@@ -4,13 +4,9 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-function triTuyetDoi(number) {
-  const a = number >= 0 ? number : -number;
-  console.log(`Trị tuyệt đối ${a}`);
-}
-
 rl.question("Nhập số vào: ", (a) => {
   a = parseInt(a);
-  triTuyetDoi(a);
+  let number = a >= 0 ? a : -a;
+  console.log(`Trị tuyệt đối ${number}`);
   rl.close();
 });

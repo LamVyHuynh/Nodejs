@@ -4,7 +4,8 @@ const rl = readline.Interface({
   output: process.stdout,
 });
 
-function fibonacii(n) {
+rl.question("Nhập số n:", (n) => {
+  n = parseInt(n);
   let a = 0;
   let b = 1;
   for (let i = 2; i <= n; i++) {
@@ -13,10 +14,5 @@ function fibonacii(n) {
     b = next;
   }
   console.log("Fibonacii thứ n: ", b);
-}
-
-rl.question("Nhập số n:", (n) => {
-  n = parseInt(n);
-  fibonacii(n);
   rl.close();
 });

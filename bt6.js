@@ -6,10 +6,6 @@ const rl = readline.createInterface({
 
 rl.question("Nhập điểm vào: ", (diem) => {
   diem = parseInt(diem);
-  kTraDiem(diem);
-  rl.close();
-});
-function kTraDiem(diem) {
   if (diem >= 90) {
     console.log("Xuất sắc");
   } else if (diem < 90 && diem >= 80) {
@@ -19,4 +15,5 @@ function kTraDiem(diem) {
   } else {
     console.log("Trung bình");
   }
-}
+  rl.close();
+});

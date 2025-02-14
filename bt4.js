@@ -4,15 +4,12 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-function soChan(number) {
+rl.question("Nhập số:", (number) => {
+  number = parseInt(number);
   if (number % 2 == 0) {
     console.log("Số chẵn");
   } else {
     console.log("Số lẻ");
   }
-}
-rl.question("Nhập số:", (number) => {
-  number = parseInt(number);
-  soChan(number);
   rl.close();
 });

@@ -4,15 +4,11 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-function kiemTraNguyenAm(ch) {
+rl.question("Nhập ký tự: ", (ch) => {
   if ("ueoai".includes(ch.toLowerCase())) {
     console.log("Nguyên âm");
   } else {
     console.log("Phụ âm");
   }
-}
-
-rl.question("Nhập ký tự: ", (ch) => {
-  kiemTraNguyenAm(ch);
   rl.close();
 });

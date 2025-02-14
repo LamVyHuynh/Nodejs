@@ -4,15 +4,12 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-function namNhuan(year) {
+rl.question("Nhập số năm:", (year) => {
+  year = parseInt(year);
   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     console.log("Năm nhuận");
   } else {
     console.log("Không phải năm nhuận");
   }
-}
-rl.question("Nhập số năm:", (year) => {
-  year = parseInt(year);
-  namNhuan(year);
   rl.close();
 });

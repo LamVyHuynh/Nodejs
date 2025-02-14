@@ -4,7 +4,8 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-function ngayThang(day) {
+rl.question("Nhập số ngày vào: ", (day) => {
+  day = parseInt(day);
   switch (day) {
     case 1:
       console.log("Thứ Hai");
@@ -30,9 +31,5 @@ function ngayThang(day) {
     default:
       console.log("Không hợp lệ");
   }
-}
-rl.question("Nhập ngày vào: ", (day) => {
-  day = parseInt(day);
-  ngayThang(day);
   rl.close();
 });

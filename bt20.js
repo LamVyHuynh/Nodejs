@@ -4,16 +4,12 @@ const rl = readline.Interface({
   output: process.stdout,
 });
 
-function daoChuoi(str) {
+rl.question("Nhập chuỗi: ", (str) => {
+  str = str.trim();
   let reversed = "";
   for (let i = str.length - 1; i >= 0; i--) {
     reversed += str[i];
   }
   console.log("Chuỗi đảo ngược: ", reversed);
-}
-
-rl.question("Nhập chuỗi: ", (str) => {
-  str = str.trim();
-  daoChuoi(str);
   rl.close();
 });

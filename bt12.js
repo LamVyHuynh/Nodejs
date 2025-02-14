@@ -4,17 +4,12 @@ const rl = readline.Interface({
   output: process.stdout,
 });
 
-function tinhTong(a) {
+rl.question("Nhập số vào: ", (a) => {
+  a = parseInt(a);
   let s = 0;
   for (let i = 1; i <= a; i++) {
     s += i;
   }
-  return s;
-}
-
-rl.question("Nhập số vào: ", (a) => {
-  a = parseInt(a);
-  let kq = tinhTong(a);
-  console.log(`Tổng chạy từ 1 đến ${a} = ${kq}`);
+  console.log(`Tổng chạy từ 1 đến ${a} = ${s}`);
   rl.close();
 });
